@@ -19,6 +19,8 @@ rule uncompress_annotations:
         "annotation/human_genome_annotation.chr.gtf.gz"
     output:
         "annotation/human_genome_annotation.gtf"
+    shell:
+        "gunzip -c {input} > {output}"
     
 
 rule get_annotations:
