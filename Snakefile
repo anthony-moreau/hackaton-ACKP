@@ -2,14 +2,14 @@ chromosomes = ["1", "2","3","4","5","6","7","8","9","10","11","12","13","14","15
 accessions_numbers = ["SRR628582", "SRR628583", "SRR628584", "SRR628585", "SRR628586", "SRR628587", "SRR628588", "SRR628589"]
 
 rule all:
-    input: 
-        "result/{sample}.counts"
+    input:
+        expand("result/{sample}.counts", sample=accessions_numbers)
 
 rule feature_count:
     input: 
         sample_mapping = "mapping/{sample}.bam",
         genome_annotation = "annotation/human_genome_annotation.gtf",
-        "mapping/{sample}.bam.bai"
+        index = "mapping/{sample}.bam.bai"
     output: 
         "result/{sample}.counts"
     singularity: 
@@ -81,28 +81,24 @@ rule star_genome_index:
 
 rule create_reference_file:
     input: 
-        "sequences/{chr}.fa.gz"
+        expand("sequences/{sample}.fa.gz", sample=chromosomes)
     output: 
         "sequences/ref.fa"
     shell:
         "gunzip -c *.fa.gz > ref.fa"
 
 rule download_chromosome_sequence:
-    input: 
-        expand("{sample}", sample=chromosomes)
     output: 
         "sequences/{chr}.fa.gz"
     shell:
         "wget -o {output} ftp://ftp.ensembl.org/pub/release-101/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.chromosome.!{input}.fa.gz"
 
 rule download_sample_fastq:
-    input:
-        expand("{sample}", sample=accessions_numbers)
     output: 
         "sequences/{sample}_1.fastq",
-        "sequences/{sample}_1.fastq"
+        "sequences/{sample}_2.fastq"
     singularity:
         "docker://evolbioinfo/sratoolkit:v2.10.8"
     threads: 8
     shell:
-        "faster-qdump {input} --split-files --include-technical -e {threads} -O sequences"
+        "faster-qdump {sample} --split-files --include-technical -e {threads} -O sequences"
