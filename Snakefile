@@ -91,7 +91,7 @@ rule download_chromosome_sequence:
     output: 
         "sequences/{chr}.fa.gz"
     shell:
-        "wget -o {output} ftp://ftp.ensembl.org/pub/release-101/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.chromosome.!{input}.fa.gz"
+        "wget -o {output} ftp://ftp.ensembl.org/pub/release-101/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.chromosome.!{chr}.fa.gz"
 
 rule download_sample_fastq:
     output: 
@@ -101,4 +101,4 @@ rule download_sample_fastq:
         "docker://evolbioinfo/sratoolkit:v2.10.8"
     threads: 8
     shell:
-        "faster-qdump {sample} --split-files --include-technical -e {threads} -O sequences"
+        "fasterq-dump {sample} --split-files --include-technical -e {threads} -O sequences"
