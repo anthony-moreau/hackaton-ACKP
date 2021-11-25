@@ -111,3 +111,5 @@ with(subset(res, padj<.01 & abs(log2FoldChange)>4), points(log2FoldChange, -log1
 
 vsdata <- vst(dds, blind=FALSE)
 plotPCA(vsdata, intgroup="Type_M_WT")
+
+save.image(file="analysis_R/Analysis.Rdata")
