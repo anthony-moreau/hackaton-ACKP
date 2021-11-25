@@ -25,15 +25,15 @@ library("DESeq2")
 ###### création du jeu de données avec uniquement les counts à la fin puis renommer les colonnes 
 
 data <- data.frame(SRR628582$Geneid,SRR628582$mapping.SRR628582.bam,SRR628583$mapping.SRR628583.bam,SRR628584$mapping.SRR628584.bam,SRR628585$mapping.SRR628585.bam,SRR628586$mapping.SRR628586.bam,SRR628587$mapping.SRR628587.bam,SRR628588$mapping.SRR628588.bam,SRR628589$mapping.SRR628589.bam)
-data <- rename(data, Geneid = SRR628582.Geneid)
-data <- rename(data, SRR628582 = SRR628582.mapping.SRR628582.bam)
-data <- rename(data, SRR628583 = SRR628583.mapping.SRR628583.bam)
-data <- rename(data, SRR628584 = SRR628584.mapping.SRR628584.bam)
-data <- rename(data, SRR628585 = SRR628585.mapping.SRR628585.bam)
-data <- rename(data, SRR628586 = SRR628586.mapping.SRR628586.bam)
-data <- rename(data, SRR628587 = SRR628587.mapping.SRR628587.bam)
-data <- rename(data, SRR628588 = SRR628588.mapping.SRR628588.bam)
-data <- rename(data, SRR628589 = SRR628589.mapping.SRR628589.bam)
+#data <- rename(data, Geneid = SRR628582.Geneid)
+#data <- rename(data, SRR628582 = SRR628582.mapping.SRR628582.bam)
+#data <- rename(data, SRR628583 = SRR628583.mapping.SRR628583.bam)
+#data <- rename(data, SRR628584 = SRR628584.mapping.SRR628584.bam)
+#data <- rename(data, SRR628585 = SRR628585.mapping.SRR628585.bam)
+#data <- rename(data, SRR628586 = SRR628586.mapping.SRR628586.bam)
+#data <- rename(data, SRR628587 = SRR628587.mapping.SRR628587.bam)
+#data <- rename(data, SRR628588 = SRR628588.mapping.SRR628588.bam)
+#data <- rename(data, SRR628589 = SRR628589.mapping.SRR628589.bam)
 
 
 ###### Métadonnées: récuperation au format data.frame des labels :
