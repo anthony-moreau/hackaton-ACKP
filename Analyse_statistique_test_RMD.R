@@ -54,7 +54,7 @@ SRR628589 <- read.table("result/SRR628589.counts")
 
 library("DESeq2") 
 library("ggplot2")
-library("tidyverse") # pour renommer les colonnes 
+#library("tidyverse") # pour renommer les colonnes 
 library("FactoMineR") # ACP
 library("factoextra") # extraire et visualiser les résultats issus de FactoMineR
 
