@@ -149,4 +149,4 @@ rule analyse_stat_R:
         "analysis_R/Analysis.Rdata"
     singularity:"docker://evolbioinfo/deseq2:v1.28.1"
     script:
-        "hackaton-ACKP/DESeq2.R"
+        "DESeq2.R"
