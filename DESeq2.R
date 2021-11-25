@@ -2,14 +2,14 @@
 
 # téléchargement des données (changer le path vers l'endroit ou se trouve le dossier que vous avez téléchargé )
 
-SRR628582 <- read.table("~/Desktop/hackaton-ACKP-main/result/SRR628582.counts", head=TRUE)
-SRR628583 <- read.table("~/Desktop/hackaton-ACKP-main/result/SRR628583.counts", head=TRUE)
-SRR628584 <- read.table("~/Desktop/hackaton-ACKP-main/result/SRR628584.counts", head=TRUE)
-SRR628585 <- read.table("~/Desktop/hackaton-ACKP-main/result/SRR628585.counts", head=TRUE)
-SRR628586 <- read.table("~/Desktop/hackaton-ACKP-main/result/SRR628586.counts", head=TRUE)
-SRR628587 <- read.table("~/Desktop/hackaton-ACKP-main/result/SRR628587.counts", head=TRUE)
-SRR628588 <- read.table("~/Desktop/hackaton-ACKP-main/result/SRR628588.counts", head=TRUE)
-SRR628589 <- read.table("~/Desktop/hackaton-ACKP-main/result/SRR628589.counts", head=TRUE)
+SRR628582 <- read.table("result/SRR628582.counts", head=TRUE)
+SRR628583 <- read.table("result/SRR628583.counts", head=TRUE)
+SRR628584 <- read.table("result/SRR628584.counts", head=TRUE)
+SRR628585 <- read.table("result/SRR628585.counts", head=TRUE)
+SRR628586 <- read.table("result/SRR628586.counts", head=TRUE)
+SRR628587 <- read.table("result/SRR628587.counts", head=TRUE)
+SRR628588 <- read.table("result/SRR628588.counts", head=TRUE)
+SRR628589 <- read.table("result/SRR628589.counts", head=TRUE)
 
 ###### installation des libraries
 
@@ -19,8 +19,6 @@ SRR628589 <- read.table("~/Desktop/hackaton-ACKP-main/result/SRR628589.counts", 
 # if (!requireNamespace("BiocManager", quietly = TRUE))
 #   install.packages("BiocManager")
 # BiocManager::install("DESeq2")
-
-install.packages("DESeq2") 
 
 library("DESeq2")
 
