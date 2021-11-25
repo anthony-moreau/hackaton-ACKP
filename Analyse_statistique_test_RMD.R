@@ -2,14 +2,40 @@
 
 # téléchargement des données (changer le path vers l'endroit ou se trouve le dossier que vous avez téléchargé )
 
-SRR628582 <- read.delim("~/Desktop/hackaton-ACKP-main/result/SRR628582.counts", comment.char="#")
-SRR628583 <- read.delim("~/Desktop/hackaton-ACKP-main/result/SRR628583.counts", comment.char="#")
-SRR628584 <- read.delim("~/Desktop/hackaton-ACKP-main/result/SRR628584.counts", comment.char="#")
-SRR628585 <- read.delim("~/Desktop/hackaton-ACKP-main/result/SRR628585.counts", comment.char="#")
-SRR628586 <- read.delim("~/Desktop/hackaton-ACKP-main/result/SRR628586.counts", comment.char="#")
-SRR628587 <- read.delim("~/Desktop/hackaton-ACKP-main/result/SRR628587.counts", comment.char="#")
-SRR628588 <- read.delim("~/Desktop/hackaton-ACKP-main/result/SRR628588.counts", comment.char="#")
-SRR628589 <- read.delim("~/Desktop/hackaton-ACKP-main/result/SRR628589.counts", comment.char="#")
+
+
+
+
+
+
+
+
+
+
+###### Recuperer le chemin (où s'exécute le script et où sont les fichiers dont on a besoin)
+dir = getwd()
+setwd(dir)
+
+###### Recuperer pour chaque sample les counts :
+## nom des files ou juste 1, 2, 3,  ... pris dans l'odre en commancant à 1
+
+SRR628582 <- read.delim("result/SRR628582.counts")    
+SRR628583 <- read.delim("result/SRR628583.counts")
+SRR628584 <- read.delim("result/SRR628584.counts")
+SRR628585 <- read.delim("result/SRR628585.counts")
+SRR628586 <- read.delim("result/SRR628586.counts")
+SRR628587 <- read.delim("result/SRR628587.counts")
+SRR628588 <- read.delim("result/SRR628588.counts")
+SRR628589 <- read.delim("result/SRR628589.counts")
+
+
+
+
+
+
+
+
+
 
 ###### installation des libraries
 
@@ -173,4 +199,3 @@ library(cluster)
 autoplot(fanny(t_data[-28908], 2), frame = TRUE, label = TRUE, label.size = 3)
 
 ## on remarque que quand on veut faire 2 cluster, il distingue le SRR...9 à part dans un groupe VS les autres. 
-
