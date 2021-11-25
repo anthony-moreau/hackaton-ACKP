@@ -19,14 +19,14 @@ setwd(dir)
 ###### Recuperer pour chaque sample les counts :
 ## nom des files ou juste 1, 2, 3,  ... pris dans l'odre en commancant à 1
 
-SRR628582 <- read.delim(snakemake@input[["result/SRR628582.counts"]])    
-SRR628583 <- read.delim(snakemake@input[["result/SRR628583.counts"]])
-SRR628584 <- read.delim(snakemake@input[["result/SRR628584.counts"]])
-SRR628585 <- read.delim(snakemake@input[["result/SRR628585.counts"]])
-SRR628586 <- read.delim(snakemake@input[["result/SRR628586.counts"]])
-SRR628587 <- read.delim(snakemake@input[["result/SRR628587.counts"]])
-SRR628588 <- read.delim(snakemake@input[["result/SRR628588.counts"]])
-SRR628589 <- read.delim(snakemake@input[["result/SRR628589.counts"]])
+SRR628582 <- read.delim("result/SRR628582.counts")    
+SRR628583 <- read.delim("result/SRR628583.counts")
+SRR628584 <- read.delim("result/SRR628584.counts")
+SRR628585 <- read.delim("result/SRR628585.counts")
+SRR628586 <- read.delim("result/SRR628586.counts")
+SRR628587 <- read.delim("result/SRR628587.counts")
+SRR628588 <- read.delim("result/SRR628588.counts")
+SRR628589 <- read.delim("result/SRR628589.counts")
 
 
 
