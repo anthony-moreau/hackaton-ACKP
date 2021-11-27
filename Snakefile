@@ -5,7 +5,7 @@ accessions_numbers = ["SRR628582", "SRR628583", "SRR628584", "SRR628585", "SRR62
 
 rule all:
     input:
-        "analysis_R/Analysis.Rdata"
+        "analysis_R/Analysis.html"
         
 # telecharger les données SRA depuis le site internet NCBI
 
@@ -146,7 +146,7 @@ rule analyse_stat_R:
     input:
         expand("result/{sample}.counts", sample=accessions_numbers)
     output:
-        "analysis_R/Analysis.Rdata"
+        "analysis_R/Analysis.html"
     singularity:"docker://evolbioinfo/deseq2:v1.28.1"
     script:
-        "DESeq2.R"
+        "DESeq2.Rmd"
