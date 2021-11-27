@@ -1,5 +1,4 @@
-Ce dépot contient un pipeline snakemake pour l'analyse de donnée d'expression de l'ADN (RNAseq)
-Ce pipeline fonctionne sous linux avec la distribution anaconda de python.
+Ce dépot contient un pipeline snakemake pour l'analyse de donnée d'expression de l'ADN (RNAseq). Ce pipeline fonctionne sous linux avec la distribution anaconda de python.
 
 Pour le faire tourner sous une machine linux:
 
