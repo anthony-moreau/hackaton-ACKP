@@ -1,13 +1,13 @@
 chromosomes = ["1", "2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","MT"]
 accessions_numbers = ["SRR628582", "SRR628583", "SRR628584", "SRR628585", "SRR628586", "SRR628587", "SRR628588", "SRR628589"]
 
-## Règle all :
+# Règle all :
 
 rule all:
     input:
         "analysis_R/Analysis.html"
         
-# telecharger les données SRA depuis le site internet NCBI
+# Télécharger les données SRA depuis le site internet NCBI
 
 rule get_sra :
     output :
@@ -17,7 +17,7 @@ rule get_sra :
         " wget -O {output} https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-run-5/{wildcards.sample}/{wildcards.sample}.1"
 
 
-# convertir chaque fichier SRA en 2 fichiers fastq
+# Convertir chaque fichier SRA en 2 fichiers fastq
 
 rule conversion_sample_fastq:
     input:
@@ -31,7 +31,7 @@ rule conversion_sample_fastq:
     shell:
         " fastq-dump --split-files ./{input} -O fastq_files"
 
-# telecharger les chromosomes du génome humain.
+# Télécharger les chromosomes du génome humain.
 # on choisit de télecharger le génome de référence de réference GRCh38-release-101 (et non pas le release-104)
 
 rule download_chromosome_sequence:
@@ -52,7 +52,7 @@ rule create_reference_file:
     shell:
         "gunzip -c {input} > {output}"
 
-# On index le génome humain de réference on obtient en sortie un dossier ref_index avec l'ensemble des informations nécessaires
+# Indexer le génome humain de réference. On obtient en sortie un dossier ref_index avec l'ensemble des informations nécessaires
 
 rule create_genome_index:
     input:
@@ -68,7 +68,7 @@ rule create_genome_index:
         STAR --runThreadN {threads} --runMode genomeGenerate --genomeDir ref_index/ --genomeSAindexNbases 6 --genomeFastaFiles {input}
         """
 
-# On annote le génome de réference
+# Télécharger le génome annoté
 
 rule get_annotations:
     output:
@@ -80,8 +80,8 @@ rule get_annotations:
         gunzip -c {output.genome_annot_zip} > {output.genome_annot}
         """
 
-# mapper le génôme pour obtenir un fichier .bam
-# on met les fichiers SA et SAindex en input pour forcer le Snakefile à aller jusqu'au bout et pas lancer le mapping avant que l'indexation soit terminée
+# Mapper le génôme pour obtenir un fichier .bam
+# Mettre les fichiers SA et SAindex en input pour forcer le Snakefile à aller jusqu'au bout et pas lancer le mapping avant que l'indexation soit terminée
 
 rule star_mapping:
     input:
@@ -110,7 +110,7 @@ rule star_mapping:
         > {output}
         """
 
-# convertir le fichier .bam en un fichier .bam.bai
+# Convertir le fichier .bam en un fichier .bam.bai
 
 rule samtool_index_mapping:
     input:
@@ -122,7 +122,7 @@ rule samtool_index_mapping:
     shell:
         "samtools index mapping/{wildcards.sample}.bam"
 
-# compter
+# Comptage
 
 rule feature_count:
     input:
@@ -140,7 +140,7 @@ rule feature_count:
 
       
   
-# analyse sur R (et renvoyer une markdown de l'analyse)
+# Analyse statistique sur R et renvoyer une markdown de l'analyse
         
 rule analyse_stat_R:
     input:
