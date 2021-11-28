@@ -8,7 +8,11 @@ cd /mnt/mydatalocal
 ````
 
 
-Ensuite télécharger tout le répertoire, vous trouverez la commande à taper sur l'image ci-dessous :
+Ensuite télécharger tout le répertoire, pour cela, tapez la commande ci dessous :
+
+```shell
+git clone git@github.com:anthony-moreau/hackaton-ACKP
+```
 
 ![image](https://user-images.githubusercontent.com/90893697/143780706-44e62151-e6d6-4b14-ac81-d2612de44491.png)
 
