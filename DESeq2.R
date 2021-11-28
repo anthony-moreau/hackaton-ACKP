@@ -27,12 +27,20 @@ SRR628589 <- read.table("result/SRR628589.counts", head=TRUE)
 
 library("DESeq2")
 
-### Création des jeu de données
+### Création des jeu de données et renommer les colonnes 
 
 # On créée dans la variable `data` le jeu de donnée, avec le nom du GeneId en 1ère colonne et les counts des 8 SRR par la suite. 
 
 data <- data.frame(SRR628582$Geneid,SRR628582$mapping.SRR628582.bam,SRR628583$mapping.SRR628583.bam,SRR628584$mapping.SRR628584.bam,SRR628585$mapping.SRR628585.bam,SRR628586$mapping.SRR628586.bam,SRR628587$mapping.SRR628587.bam,SRR628588$mapping.SRR628588.bam,SRR628589$mapping.SRR628589.bam)
-
+colnames(data)[1] <- "Geneid"
+colnames(data)[2] <- "SRR628582"
+colnames(data)[3] <- "SRR628583"
+colnames(data)[4] <- "SRR628584"
+colnames(data)[5] <- "SRR628585"
+colnames(data)[6] <- "SRR628586"
+colnames(data)[7] <- "SRR628587"
+colnames(data)[8] <- "SRR628588"
+colnames(data)[9] <- "SRR628589"
 
 #On crée les métadonnées: récuperation au format data.frame des labels :
   
@@ -146,3 +154,5 @@ abline(h=-log10(max(res$pvalue[res$padj<.0002], na.rm=TRUE)), col="black", lty=4
 
 vsdata <- vst(dds, blind=FALSE)
 plotPCA(vsdata, intgroup="Type_M_WT")
+
+save.image(file = "analysis_R/Analysis.Rdata")
