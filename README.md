@@ -33,8 +33,12 @@ pip install snakemake
 # Activer l'environnement snakemake
 conda activate snakemake
 
-# Installer singularity si nécessaire sous environnement snakemake. Nous utilisons ici la version 3.6.3.
+# Taper la commande suivante pour savoir si singularity est installé ou non
+singularity
+
+# Si non, installer singularity  sous environnement snakemake grâce à la commande suivante . Nous utilisons ici la version 3.6.3.
 conda install singularity = 3.6.3
+
 ```
 
 #### Étape 4 : Lancer le pipepeline
