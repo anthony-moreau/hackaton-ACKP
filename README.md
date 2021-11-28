@@ -62,13 +62,13 @@ conda install singularity = 3.6.3
 │   ├── ...
 │   ├── ...
 │   └── SRR628589.counts.summary
-├── Groupe_4_Rapport
-│   └── Rapport_hackathon_Groupe4
 ├── Groupe_4_Analyse_Sup_R
 │   └── ACP_EnhancedVolcano_Article2Plots.Rmd
 │   └── liste_fusion.xlsx
+│   └── ACP_EnhancedVolcano_Article2Plots.html
 ├── DESeq2.R
 ├── README.md
+├── Rapport_hackathon_Groupe4
 └── Snakefile
 ```
 
@@ -164,6 +164,8 @@ On obtient un fichier html avec différents graphes qui seront commentés dans n
   - Le graphe de l'ACP. (correspond à la Figure 2 dans notre rapport).
   - Le Enhanced Volcano Plot. (correspond à la Figure 3 dans notre rapport).
   - 2 graphes de comparaison des gènes différentiellement exprimés dans notre étude VS dans l'article 2.(correspond à la Figure 5.a et 5.b dans notre rapport). 
+
+On obtient en sorti un fichier ACP_EnhancedVolcano_Article2Plots.html que l'on a également mis dans le Github dans le dossier Groupe_4_Analyse_Sup_R. Pour pouvoir l'ouvrir, la manipulation est la même que pour le fichier Group_4_R_result/Analysis.html. Il faut télécharger le fichier "ACP_EnhancedVolcano_Article2Plots.html" depuis Github en appuyant sur le bouton "Download", copier le lien de la page qui va s'ouvrir et aller sur le site https://htmlpreview.github.io/ puis coller le lien et cliquer sur "Preview". 
 
 
 
