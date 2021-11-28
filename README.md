@@ -14,12 +14,11 @@ Ensuite télécharger tout le répertoire, pour cela, tapez la commande ci desso
 git clone git@github.com:anthony-moreau/hackaton-ACKP
 ```
 
-![image](https://user-images.githubusercontent.com/90893697/143780706-44e62151-e6d6-4b14-ac81-d2612de44491.png)
+![image](https://user-images.githubusercontent.com/90893697/143780706-44e62151-e6d6-4b14-ac81-d2612de44491.png)  
 
 #### Étape 2 : Installer conda
-(https://www.anaconda.com/products/individual)
-(https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
-
+(https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)  
+(https://www.anaconda.com/products/individual)  
 
 #### Étape 3 : Installer via conda snakemake et singularity 
 ```shell
