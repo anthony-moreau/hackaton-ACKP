@@ -1,14 +1,5 @@
-Ce dépot contient un pipeline snakemake pour l'analyse de donnée d'expression de l'ADN (RNAseq). Ce pipeline fonctionne sous linux avec la distribution anaconda de python.
 
-Pour le faire tourner sous une machine linux:
-
-- télécharger le dépot github
-- installer conda (https://www.anaconda.com/products/individual)
-- installer via conda snakemake et singularity dans le même environnement (conda activate puis conda install snakemake/singularity)
-- se placer dans le dossier du dépôt et lancer le pipepeline avec la commande snakemake --use-singularity -cores all
-
-
-### Usage
+### Guide Utilisateur : 
 #### Étape 1 : Télécharger le dépot github
 Se placer dans un répertoire qui contient suffisamment de mémoire, dans notre cas, on se place dans : 
 
@@ -69,6 +60,9 @@ Avant de lancer le pipeline, assurez-vous que vous êtes dans le dossier avec no
 
 
 - Lancer le pipeline 
+
+Se placer dans le dossier du dépôt et lancer le pipeline
+
 ```shell
 # Vous pouvez préciser le nombre de cores après --cores, et le fichier snakefile en utilisant -s <nom_du_fichier> 
 # si vous avez d'autre fichiers snakefile dans le même dossier
