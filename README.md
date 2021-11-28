@@ -18,6 +18,7 @@ git clone git@github.com:anthony-moreau/hackaton-ACKP
 
 #### Étape 2 : Installer conda
 (https://www.anaconda.com/products/individual)
+(https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
 
 
 #### Étape 3 : Installer via conda snakemake et singularity 
