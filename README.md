@@ -24,7 +24,8 @@ Vous pouvez télécherger tout le répertoire par des méthodes proposées dans 
 conda activate 
 
 # Installer snakemake 
-# vous pouvez l'installer par Conda/Mamba ou pip : https://snakemake.readthedocs.io/en/stable/getting_started/installation.html#
+# vous pouvez l'installer par Conda/Mamba ou pip : 
+# https://snakemake.readthedocs.io/en/stable/getting_started/installation.html#
 
 # Activer snakemake environment
 conda activate snakemake
@@ -52,12 +53,77 @@ conda activate singularity=v3.6.3
 ├── README.md
 └── Snakefile
 ```
+Avant de lancer le pipeline, assurez-vous que vous êtes dans le dossier avec nos fichiers "DESeq2.R" et "Snakefile".
+
 
 - Lancer le pipeline 
 ```shell
-# Avant de lancer le pipeline, assurez-vous que vous êtes dans le dossier avec DESeq2.R et Snakefile
-# 
-snakemake --use-singularity -cores all
+# Vous pouvez préciser le nombre de cores après --cores, et le fichier snakefile en utilisant -s <nom_du_fichier> 
+# si vous avez d'autre fichiers snakefile dans le même dossier
+snakemake --use-singularity --cores all
 ```
 
+- Le sturcture des sorties du Snakefile :
+```
+.
+├── Log.final.out
+├── Log.out
+├── Log.progress.out
+├── Log.std.out
+├── SJ.out.tab
+├── SRA_files
+│   ├── SRR628582.sra
+│   ├── SRR628583.sra
+│   ├── SRR628584.sra
+│   ├── SRR628585.sra
+│   ├── SRR628586.sra
+│   ├── SRR628587.sra
+│   ├── SRR628588.sra
+│   └── SRR628589.sra
+├── annotations
+│   ├──human_genome_annotation.chr.gtf
+│   └──human_genome_annotation.chr.gtf.gz
+├── chr_files
+│   ├── 1.fa.gz
+│   ├── 2.fa.gz
+│   ├── ...
+│   ├── ...
+│   ├── 22.fa.gz
+│   └── MT.fa.gz
+├── fastq_files
+│   ├── SRR628582_1.fastq
+│   ├── SRR628582_2.fastq
+│   ├── SRR628583_1.fastq
+│   ├── SRR628583_2.fastq
+│   ├── ...
+│   ├── ...
+│   └── SRR628589_2.fastq
+├── mapping
+│   ├── SRR628582.bam
+│   ├── SRR628582.bam.bai
+│   ├── ...
+│   ├── ...
+│   └── SRR628589.bam.bai
+├── ref.fa
+├── ref_index
+│   ├──Genome
+│   ├──Log.out
+│   ├──SA
+│   ├──SAindex
+│   ├──chrLength.txt
+│   ├──chrName.txt
+│   ├──chrNameLength.txt
+│   ├──chrStart.txt
+│   └──genomeParameters.txt
+├── result
+│   ├──SRR628582.counts
+│   ├──SRR628582.counts.summary
+│   ├── ...
+│   ├── ...
+│   ├──SRR628589.counts
+│   └──SRR628589.counts.summary
+├── DESeq2.R
+└── Snakefile
+```
+Voir le rapport pour les explications détaillées.
 
