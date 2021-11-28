@@ -11,8 +11,8 @@ Pour le faire tourner sous une machine linux:
 ### Usage
 #### Étape 1 : Télécharger le dépot github
 Vous pouvez télécherger tout le répertoire par des méthodes proposées dans le bouton verte "Code" comme ci-dessous :
-![image](https://user-images.githubusercontent.com/90893697/143773298-cee3915a-1b96-4367-9b14-662534adaf6c.png)
 
+![image](https://user-images.githubusercontent.com/90893697/143780706-44e62151-e6d6-4b14-ac81-d2612de44491.png)
 
 #### Étape 2 : Installer conda
 (https://www.anaconda.com/products/individual)
@@ -32,28 +32,32 @@ pip install snakemake
 conda activate snakemake
 
 # Installer singularity sous snakemake environment. Nous utilisons ici la version 3.6.3.
-conda installer singularity=3.6.3
+conda install singularity=3.6.3
 ```
 
 #### Étape 4 : Lancer le pipepeline
 - Le sturcture du répertoire :
 ```
 .
-├── our_result
+├── Group_4_R_result
 │   ├── Analysis.Rdata
-│   ├── Rplots.pdf
+│   ├── Analysis.html
+│   └── Rplots.pdf
+├── Group_4_counts_result
 │   ├── SRR628582.counts
 │   ├── SRR628582.counts.summary
 │   ├── SRR628583.counts
-│   ├── SRR628583.counts.summary
 │   ├── ...
 │   ├── ...
 │   └── SRR628589.counts.summary
-├── Analysis.html 
+├── Groupe_4_Rapport
+│   └── !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ├── DESeq2.R
 ├── README.md
 └── Snakefile
 ```
+
+Veuillez aller sur le site https://htmlpreview.github.io/ pour afficher le ficher "Analysis.html".
 Avant de lancer le pipeline, assurez-vous que vous êtes dans le dossier avec nos fichiers "DESeq2.R" et "Snakefile".
 
 
@@ -95,13 +99,13 @@ snakemake --use-singularity --cores all
 │   ├── SRR628582_1.fastq
 │   ├── SRR628582_2.fastq
 │   ├── SRR628583_1.fastq
-│   ├── SRR628583_2.fastq
 │   ├── ...
 │   ├── ...
 │   └── SRR628589_2.fastq
 ├── mapping
 │   ├── SRR628582.bam
 │   ├── SRR628582.bam.bai
+│   ├── SRR628583.bam
 │   ├── ...
 │   ├── ...
 │   └── SRR628589.bam.bai
@@ -119,9 +123,9 @@ snakemake --use-singularity --cores all
 ├── result
 │   ├──SRR628582.counts
 │   ├──SRR628582.counts.summary
+│   ├──SRR628583.counts
 │   ├── ...
 │   ├── ...
-│   ├──SRR628589.counts
 │   └──SRR628589.counts.summary
 ├── DESeq2.R
 └── Snakefile
