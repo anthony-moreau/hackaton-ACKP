@@ -54,6 +54,9 @@ conda install singularity = 3.6.3
 │   └── SRR628589.counts.summary
 ├── Groupe_4_Rapport
 │   └── Rapport_hackathon_Groupe4
+├── Groupe_4_Analyse_Sup_R
+│   └── ACP_EnhancedVolcano_Article2Plots.Rmd
+│   └── liste_fusion.xlsx
 ├── DESeq2.R
 ├── README.md
 └── Snakefile
@@ -61,7 +64,7 @@ conda install singularity = 3.6.3
 
 Le fichier Analysis.html a été généré en important les résultat des counts sur notre machine locale. Il s'agit du même code utilisé que dans le script R DESeq2.R mais qui a été enregistré en tant que fichier .Rmd et qui a donc permis l'obtention d'un fichier html en sortie.  L'idéal aurait été de pouvoir générer ce html grâce à une règle sur Snakefile. Par manque de temps nous n'avons pas pu le réaliser mais nous tenions tout de même à insérer le fichier html généré avec les commentaires associés. La règle Snakefile actuelle de notre pipeline renvoie quant à elle en sortie un fichier Analysis.Rdata ainsi qu'un fichier Analysis_Rplots.pdf contenant les mêmes graphes que dans le fichier html.
 
-Pour lire le fichier "Analysis.html", veuillez télécharger le fichier "Analysis.html", copier le lien de la page qui va s'ouvrir et aller sur le site https://htmlpreview.github.io/ puis copier le lien et cliquer sur "Preview". 
+Pour lire le fichier "Analysis.html", veuillez télécharger le fichier "Analysis.html", copier le lien de la page qui va s'ouvrir et aller sur le site https://htmlpreview.github.io/ puis coller le lien et cliquer sur "Preview". 
 
 
 - Lancer le pipeline 
@@ -135,9 +138,22 @@ snakemake --use-singularity --cores all
 │   └──SRR628589.counts.summary
 ├── analysis_R
 │   ├── Analysis.Rdata
-│   └──Analysis_Rplots.pdf
+│   └── Analysis_Rplots.pdf
 ├── DESeq2.R
 └── Snakefile
 ```
-Voir le rapport pour l'analyse des résultats et des plots obtenus. 
+
+Dans le dépôt Github à l'emplacement Groupe_4_Rapport/Rapport_hackathon_Groupe4 se situe notre rapport. Dans celui-ci on explique le fonctionnement de chaque règle du Snakefile et on analyse les résultats de counts des 8 fichiers SRR. Les plots obtenus en sortie dans le dossier analysis_R/Analysis_Rplots.pdf sont repris et expliqué dans le rapport. 
+
+#### Étape 5 : Analyses supplémentaire
+
+Afin d'effectuer une analyse plus approfondies des données et pouvoir comparer nos résultats avec les articles, nous avons créé un deuxième script R : ACP_EnhancedVolcano_Article2Plots.Rmd. Celui-ci installe des bibliothèques supplémentaires. Il charge les fichiers de comptage des SRR ainsi qu'un fichier Excel liste_fusion.xlsx qui comprend l'ensemble des gènes de notre étude et leurs caractéristiques (padj, LFC, baseMean, ...) ainsi que les 325 gènes différentiellement exprimés de l'article 2 que l'on a récupéré dans la table supplémentaire 8. Ces deux fichiers sont placés dans le dossier Groupe_4_Analyse_Sup_R
+
+Il faut télécharger dans un même dossier sur sa machine locale les fichiers ACP_EnhancedVolcano_Article2Plots.Rmd, liste_fusion.xlsx et le dossier result/* (obtenu grâce au lancement du Snakefile). Puis ouvrir le fichier .Rmd sur RStudio et le knitter en html. (Remarque: il faut une version récente de R au moins 4.1).   
+On obtient un fichier html avec différents graphes qui seront commentés dans notre rapport : 
+  - Le graphe de l'ACP. (correspond à la Figure 2 dans notre rapport).
+  - Le Enhanced Volcano Plot. (correspond à la Figure 3 dans notre rapport).
+  - 2 graphes de comparaison des gènes différentiellement exprimés dans notre étude VS dans l'article 2.(correspond à la Figure 5.a et 5.b dans notre rapport). 
+
+
 
