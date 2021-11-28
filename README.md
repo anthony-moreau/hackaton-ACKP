@@ -20,6 +20,7 @@ Ensuite télécharger tout le répertoire, pour cela, tapez la commande ci desso
 git clone git@github.com:anthony-moreau/hackaton-ACKP
 ```
 
+ou le bouton Download ZIP :  
 ![image](https://user-images.githubusercontent.com/90893697/143780706-44e62151-e6d6-4b14-ac81-d2612de44491.png)
 
 #### Étape 2 : Installer conda
