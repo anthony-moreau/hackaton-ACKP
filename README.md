@@ -1,7 +1,7 @@
 
 ### Guide Utilisateur : 
 #### Étape 1 : Télécharger le dépot github
-Se placer dans un répertoire qui contient suffisamment de mémoire, dans notre cas, on se place dans : 
+Se placer dans un répertoire qui contient suffisamment de mémoire, dans notre cas, on se place dans le répertoire mydatalocal grâce à la commande : 
 
 ```shell
 cd /mnt/mydatalocal
