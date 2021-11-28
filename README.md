@@ -6,7 +6,7 @@ Se placer dans un répertoire qui contient suffisamment de mémoire, dans notre 
 ```shell
 cd /mnt/mydatalocal
 ````
-```shel
+
 
 Ensuite télécharger tout le répertoire, vous trouverez la commande à taper sur l'image ci-dessous :
 
