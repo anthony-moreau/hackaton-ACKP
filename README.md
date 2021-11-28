@@ -10,7 +10,14 @@ Pour le faire tourner sous une machine linux:
 
 ### Usage
 #### Étape 1 : Télécharger le dépot github
-Vous pouvez télécherger tout le répertoire par des méthodes proposées dans le bouton verte "Code" comme ci-dessous :
+Se placer dans un répertoire qui contient suffisamment de mémoire, dans notre cas, on se place dans : 
+
+```shell
+cd /mnt/mydatalocal
+````
+```shel
+
+Ensuite télécharger tout le répertoire, vous trouverez la commande à taper sur l'image ci-dessous :
 
 ![image](https://user-images.githubusercontent.com/90893697/143780706-44e62151-e6d6-4b14-ac81-d2612de44491.png)
 
@@ -68,7 +75,7 @@ Avant de lancer le pipeline, assurez-vous que vous êtes dans le dossier avec no
 snakemake --use-singularity --cores all
 ```
 
-- Le sturcture des sorties du Snakefile :
+- Le structure des sorties du Snakefile :
 ```
 .
 ├── Log.final.out
@@ -130,5 +137,5 @@ snakemake --use-singularity --cores all
 ├── DESeq2.R
 └── Snakefile
 ```
-Voir le rapport pour les explications détaillées.
+Voir le rapport pour l'analyse des résultats et des plots obtenus. 
 
