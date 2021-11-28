@@ -1,7 +1,7 @@
 ##############################################################################################
 # Fichier DESeq2 permettant l'obtention de : 
-#     - un fichier DESeq2.Rdata
-#     - un fichier Rplots.pdf avec les graphes que l'on trace dans ce script R 
+#     - un fichier Analysis.Rdata dans le dossier analysis_R
+#     - un fichier Rplots.pdf avec les graphes que l'on trace dans ce script R dans le même 
 ##############################################################################################
 
 
