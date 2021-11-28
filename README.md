@@ -14,15 +14,15 @@ Ensuite télécharger tout le répertoire, pour cela, tapez la commande ci desso
 git clone git@github.com:anthony-moreau/hackaton-ACKP
 ```
 
-![image](https://user-images.githubusercontent.com/90893697/143780706-44e62151-e6d6-4b14-ac81-d2612de44491.png)  
+![image](https://user-images.githubusercontent.com/90893697/143780706-44e62151-e6d6-4b14-ac81-d2612de44491.png)
 
 #### Étape 2 : Installer conda
-(https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)  
-(https://www.anaconda.com/products/individual)  
+(https://www.anaconda.com/products/individual)
+
 
 #### Étape 3 : Installer via conda snakemake et singularity 
 ```shell
-# Activer conda environment
+# Activer l'environment Conda 
 conda activate 
 
 # Installer snakemake si nécessaire 
@@ -30,7 +30,7 @@ conda activate
 # https://snakemake.readthedocs.io/en/stable/getting_started/installation.html#
 pip install snakemake
 
-# Activer snakemake environment
+# Activer l'environnement snakemake
 conda activate snakemake
 
 # Installer singularity si nécessaire sous environnement snakemake. Nous utilisons ici la version 3.6.3.
@@ -59,13 +59,14 @@ conda install singularity = 3.6.3
 └── Snakefile
 ```
 
-Veuillez aller sur le site https://htmlpreview.github.io/ pour afficher le ficher "Analysis.html".  
-Avant de lancer le pipeline, assurez-vous que vous êtes dans le dossier avec nos fichiers "DESeq2.R" et "Snakefile".
+Le fichier Analysis.html a été généré en important les résultat des counts sur notre machine locale. Il s'agit du même code utilisé que dans le script R DESeq2.R mais qui a été enregistré en tant que fichier .Rmd et qui a donc permis l'obtention d'un fichier html en sortie.  L'idéal aurait été de pouvoir générer ce html grâce à une règle sur Snakefile. Par manque de temps nous n'avons pas pu le réaliser mais nous tenions tout de même à insérer le fichier html généré avec les commentaires associés. La règle Snakefile actuelle de notre pipeline renvoie quant à elle en sortie un fichier .Rdata ainsi qu'un fichier Analysis_Rplots.pdf contenant les mêmes graphes que dans le fichier html.
+
+Pour lire le fichier "Analysis.html", veuillez télécharger le fichier "Anlysis.html", copier le lien de la page qui va s'ouvrir et aller sur le site https://htmlpreview.github.io/ puis copier le lien et cliquer sur "Preview". 
 
 
 - Lancer le pipeline 
 
-Se placer dans le dossier du dépôt et lancer le pipeline
+Se placer dans le dossier du dépôt (qui contient les fichiers "DESeq2.R" et "Snakefile") et lancer le pipeline avec la commande suivante: 
 
 ```shell
 # Vous pouvez préciser le nombre de cores après --cores, et le fichier snakefile en utilisant -s <nom_du_fichier> 
