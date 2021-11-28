@@ -51,13 +51,13 @@ conda install singularity=3.6.3
 │   ├── ...
 │   └── SRR628589.counts.summary
 ├── Groupe_4_Rapport
-│   └── !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+│   └── Rapport_hackathon_Groupe4
 ├── DESeq2.R
 ├── README.md
 └── Snakefile
 ```
 
-Veuillez aller sur le site https://htmlpreview.github.io/ pour afficher le ficher "Analysis.html".
+Veuillez aller sur le site https://htmlpreview.github.io/ pour afficher le ficher "Analysis.html".  
 Avant de lancer le pipeline, assurez-vous que vous êtes dans le dossier avec nos fichiers "DESeq2.R" et "Snakefile".
 
 
