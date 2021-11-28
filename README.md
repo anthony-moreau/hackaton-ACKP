@@ -25,7 +25,7 @@ git clone git@github.com:anthony-moreau/hackaton-ACKP
 # Activer conda environment
 conda activate 
 
-# Installer snakemake 
+# Installer snakemake si nécessaire 
 # vous pouvez l'installer par Conda/Mamba ou pip : 
 # https://snakemake.readthedocs.io/en/stable/getting_started/installation.html#
 pip install snakemake
@@ -33,12 +33,12 @@ pip install snakemake
 # Activer snakemake environment
 conda activate snakemake
 
-# Installer singularity sous snakemake environment. Nous utilisons ici la version 3.6.3.
-conda install singularity=3.6.3
+# Installer singularity si nécessaire sous environnement snakemake. Nous utilisons ici la version 3.6.3.
+conda install singularity = 3.6.3
 ```
 
 #### Étape 4 : Lancer le pipepeline
-- Le sturcture du répertoire :
+- Le structure du répertoire :
 ```
 .
 ├── Group_4_R_result
