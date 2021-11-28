@@ -1,5 +1,11 @@
-
 ### Guide Utilisateur : 
+
+#### Auteurs : 
+- Chaimae EL HOUJJAJI - AgroParisTech - chaimae.elhoujjaji@agroparistech.fr
+- Kexin LI - AgroParisTech - kexin.li@agroparistech.fr
+- Anthony MOREAU - AgroParisTech - anthony.moreau@agroparistech.fr
+- Pauline TURK - AgroParisTech -pauline.turk@agroparistech.fr
+
 #### Étape 1 : Télécharger le dépot github
 Se placer dans un répertoire qui contient suffisamment de mémoire, dans notre cas, on se place dans le répertoire mydatalocal grâce à la commande : 
 
