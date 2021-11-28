@@ -26,12 +26,13 @@ conda activate
 # Installer snakemake 
 # vous pouvez l'installer par Conda/Mamba ou pip : 
 # https://snakemake.readthedocs.io/en/stable/getting_started/installation.html#
+pip install snakemake
 
 # Activer snakemake environment
 conda activate snakemake
 
 # Installer singularity sous snakemake environment. Nous utilisons ici la version 3.6.3.
-conda activate singularity=v3.6.3
+conda installer singularity=3.6.3
 ```
 
 #### Étape 4 : Lancer le pipepeline
