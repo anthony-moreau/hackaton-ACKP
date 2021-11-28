@@ -59,7 +59,7 @@ conda install singularity = 3.6.3
 └── Snakefile
 ```
 
-Le fichier Analysis.html a été généré en important les résultat des counts sur notre machine locale. Il s'agit du même code utilisé que dans le script R DESeq2.R mais qui a été enregistré en tant que fichier .Rmd et qui a donc permis l'obtention d'un fichier html en sortie.  L'idéal aurait été de pouvoir générer ce html grâce à une règle sur Snakefile. Par manque de temps nous n'avons pas pu le réaliser mais nous tenions tout de même à insérer le fichier html généré avec les commentaires associés. La règle Snakefile actuelle de notre pipeline renvoie quant à elle en sortie un fichier .Rdata ainsi qu'un fichier Analysis_Rplots.pdf contenant les mêmes graphes que dans le fichier html.
+Le fichier Analysis.html a été généré en important les résultat des counts sur notre machine locale. Il s'agit du même code utilisé que dans le script R DESeq2.R mais qui a été enregistré en tant que fichier .Rmd et qui a donc permis l'obtention d'un fichier html en sortie.  L'idéal aurait été de pouvoir générer ce html grâce à une règle sur Snakefile. Par manque de temps nous n'avons pas pu le réaliser mais nous tenions tout de même à insérer le fichier html généré avec les commentaires associés. La règle Snakefile actuelle de notre pipeline renvoie quant à elle en sortie un fichier Analysis.Rdata ainsi qu'un fichier Analysis_Rplots.pdf contenant les mêmes graphes que dans le fichier html.
 
 Pour lire le fichier "Analysis.html", veuillez télécharger le fichier "Anlysis.html", copier le lien de la page qui va s'ouvrir et aller sur le site https://htmlpreview.github.io/ puis copier le lien et cliquer sur "Preview". 
 
