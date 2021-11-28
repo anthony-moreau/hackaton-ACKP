@@ -44,7 +44,7 @@ conda install singularity = 3.6.3
 ├── Group_4_R_result
 │   ├── Analysis.Rdata
 │   ├── Analysis.html
-│   └── Rplots.pdf
+│   └── Analysis_Rplots.pdf
 ├── Group_4_counts_result
 │   ├── SRR628582.counts
 │   ├── SRR628582.counts.summary
@@ -132,6 +132,9 @@ snakemake --use-singularity --cores all
 │   ├── ...
 │   ├── ...
 │   └──SRR628589.counts.summary
+├── analysis_R
+│   ├── Analysis.Rdata
+│   └──Analysis_Rplots.pdf
 ├── DESeq2.R
 └── Snakefile
 ```
