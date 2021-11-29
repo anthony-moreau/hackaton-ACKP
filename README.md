@@ -87,6 +87,7 @@ Se placer dans le dossier du dépôt (qui contient les fichiers "DESeq2.R" et "S
 # si vous avez d'autre fichiers snakefile dans le même dossier
 snakemake --use-singularity --cores all
 ```
+Temps de calcul du Snakefile : environ 2h40
 
 - Le structure des sorties du Snakefile :
 ```
