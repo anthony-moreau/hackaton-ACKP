@@ -69,7 +69,7 @@ conda install singularity = 3.6.3
 │   └── ACP_EnhancedVolcano_Article2Plots.html
 ├── DESeq2.R
 ├── README.md
-├── Rapport_hackathon_Groupe4
+├── Rapport_hackathon_Groupe4.pdf
 └── Snakefile
 ```
 
